@@ -6,27 +6,27 @@ $types: ("p": "padding", "m": "margin");
     
     @each $size in $sizes {
         .#{$key}-#{$size} {
-            #{$type}: var(--sizing-#{$size});
+            #{$type}: var(--sz-#{$size});
         }
         // .#{$key}x-#{$size} {
-        //     #{$type}-left: var(--sizing-#{$size});
-        //     #{$type}-right: var(--sizing-#{$size});
+        //     #{$type}-left: var(--sz-#{$size});
+        //     #{$type}-right: var(--sz-#{$size});
         // }
         .#{$key}l-#{$size} {
-            #{$type}-left: var(--sizing-#{$size});
+            #{$type}-left: var(--sz-#{$size});
         }
         .#{$key}r-#{$size} {
-            #{$type}-right: var(--sizing-#{$size});
+            #{$type}-right: var(--sz-#{$size});
         }
         // .#{$key}y-#{$size} {
-        //     #{$type}-top: var(--sizing-#{$size});
-        //     #{$type}-bottom: var(--sizing-#{$size});
+        //     #{$type}-top: var(--sz-#{$size});
+        //     #{$type}-bottom: var(--sz-#{$size});
         // }
         .#{$key}t-#{$size} {
-            #{$type}-top: var(--sizing-#{$size});
+            #{$type}-top: var(--sz-#{$size});
         }
         .#{$key}b-#{$size} {
-            #{$type}-bottom: var(--sizing-#{$size});
+            #{$type}-bottom: var(--sz-#{$size});
         }
     }
 }
@@ -38,27 +38,27 @@ $types: ("p": "padding", "m": "margin");
         
             @each $size in $sizes {
                 .#{$key}-#{$breakpoint_key}-#{$size} {
-                    #{$type}: var(--sizing-#{$size});
+                    #{$type}: var(--sz-#{$size});
                 }
                 // .#{$key}x-#{$breakpoint_key}-#{$size} {
-                //     #{$type}-left: var(--sizing-#{$size});
-                //     #{$type}-right: var(--sizing-#{$size});
+                //     #{$type}-left: var(--sz-#{$size});
+                //     #{$type}-right: var(--sz-#{$size});
                 // }
                 .#{$key}l-#{$breakpoint_key}-#{$size} {
-                    #{$type}-left: var(--sizing-#{$size});
+                    #{$type}-left: var(--sz-#{$size});
                 }
                 .#{$key}r-#{$breakpoint_key}-#{$size} {
-                    #{$type}-right: var(--sizing-#{$size});
+                    #{$type}-right: var(--sz-#{$size});
                 }
                 // .#{$key}y-#{$breakpoint_key}-#{$size} {
-                //     #{$type}-top: var(--sizing-#{$size});
-                //     #{$type}-bottom: var(--sizing-#{$size});
+                //     #{$type}-top: var(--sz-#{$size});
+                //     #{$type}-bottom: var(--sz-#{$size});
                 // }
                 .#{$key}t-#{$breakpoint_key}-#{$size} {
-                    #{$type}-top: var(--sizing-#{$size});
+                    #{$type}-top: var(--sz-#{$size});
                 }
                 .#{$key}b-#{$breakpoint_key}-#{$size} {
-                    #{$type}-bottom: var(--sizing-#{$size});
+                    #{$type}-bottom: var(--sz-#{$size});
                 }
             }
         }

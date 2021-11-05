@@ -4,8 +4,8 @@
         flex: 1; 
     }
     &:not(.no-padding) {
-        padding-left: var(--sizing-1);
-        padding-right: var(--sizing-1);
+        padding-left: var(--sz-1);
+        padding-right: var(--sz-1);
     }
 }
 
@@ -28,6 +28,7 @@
 }
 
 
+// TODO: look into later...
 @if $wp_classes != 0 {
     .column {
         @extend .col;

@@ -1,0 +1,28 @@
+.row,
+.column {
+    display: flex;
+    flex-wrap: wrap;
+
+    // "Unlists" <ul> elements 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    &:not(.nowrap) {
+        flex-wrap: wrap;
+    }
+}
+.row { flex-direction: row; }
+.column { flex-direction: column; }
+
+
+@each $breakpoint_key, $breakpoint_value in $breakpoints {
+    @media (min-width: $breakpoint_value) {
+        .row-#{$breakpoint_key} { 
+            flex-direction: row; 
+        }
+        .column-#{$breakpoint_key} { 
+            flex-direction: column; 
+        }
+    }
+}

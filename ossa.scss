@@ -7,7 +7,10 @@
     @import './src/misc/spacing';
 
 // Layout
+    @import './src/layout/container';
+    @import './src/layout/rows';
     @import './src/layout/columns';
+    @import './src/layout/alignment';
 
 // Mixins
-    @import './src/mixins/spacing';
+    // @import './src/mixins/spacing';
