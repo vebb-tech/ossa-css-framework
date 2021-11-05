@@ -1,0 +1,49 @@
+// @import '../spacing/';
+
+@mixin padding($top: null, $right: null, $bottom: null, $left: null) {
+    @if $top and $right and $bottom and $left{
+        padding: var(--sizing-#{$top}) 
+                 var(--sizing-#{$right}) 
+                 var(--sizing-#{$bottom}) 
+                 var(--sizing-#{$left});
+    } @else {
+
+        @if $top {
+            padding-top: var(--sizing-#{$top});
+        }
+        @if $right {
+            padding-right: var(--sizing-#{$right});
+        }
+        @if $bottom {
+            padding-bottom: var(--sizing-#{$bottom});
+        }
+        @if $left {
+            padding-left: var(--sizing-#{$left});
+        }
+        
+    }
+}
+
+@mixin margin($top: null, $right: null, $bottom: null, $left: null) {
+    @if $top {
+        margin-top: var(--sizing-#{$top});
+    }
+    @if $right {
+        margin-right: var(--sizing-#{$right});
+    }
+    @if $bottom {
+        margin-bottom: var(--sizing-#{$bottom});
+    }
+    @if $left {
+        margin-left: var(--sizing-#{$left});
+    }
+}
+
+
+
+// Example
+.mail-icon {
+    // @include padding($left: '1', $right: '2-5');
+    @include padding(1, 2, 3, 4);
+    @include margin(null, '2', null, '1-5');
+}

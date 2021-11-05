@@ -1,0 +1,35 @@
+.col {
+    flex: 0 0 100%;
+    @media (min-width: 1024px) {
+        flex: 1; 
+    }
+    &:not(.no-padding) {
+        padding-left: var(--sizing-1);
+        padding-right: var(--sizing-1);
+    }
+}
+
+.col-auto {
+    flex: 1;
+    min-width: 1px; 
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        flex: 0 0 ($i * 8.33333333%);
+    }
+}
+@media (min-width: 1024px) {
+    @for $i from 1 through 12 {
+        .col-desktop-#{$i} {
+            flex: 0 0 ($i * 8.33333333%);
+        }
+    }
+}
+
+
+@if $wp_classes != 0 {
+    .column {
+        @extend .col;
+    }
+}
