@@ -1,0 +1,6 @@
+.vscode/
+.vscode/*
+koala-config.json
+.vscode/sftp.json
+node_modules/
+**.css.map

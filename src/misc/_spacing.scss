@@ -1,0 +1,61 @@
+$types: ("p": "padding", "m": "margin");
+
+@each $key, $type in $types {
+    
+    @each $size in $sizes {
+        .#{$key}-#{$size} {
+            #{$type}: var(--sizing-#{$size});
+        }
+        .#{$key}x-#{$size} {
+            #{$type}-left: var(--sizing-#{$size});
+            #{$type}-right: var(--sizing-#{$size});
+        }
+        .#{$key}l-#{$size} {
+            #{$type}-left: var(--sizing-#{$size});
+        }
+        .#{$key}r-#{$size} {
+            #{$type}-right: var(--sizing-#{$size});
+        }
+        .#{$key}y-#{$size} {
+            #{$type}-top: var(--sizing-#{$size});
+            #{$type}-bottom: var(--sizing-#{$size});
+        }
+        .#{$key}t-#{$size} {
+            #{$type}-top: var(--sizing-#{$size});
+        }
+        .#{$key}b-#{$size} {
+            #{$type}-bottom: var(--sizing-#{$size});
+        }
+    }
+}
+
+@media (min-width: $lg) {
+    @each $key, $type in $types {
+    
+        @each $size in $sizes {
+            .#{$key}-lg-#{$size} {
+                #{$type}: var(--sizing-#{$size});
+            }
+            .#{$key}x-lg-#{$size} {
+                #{$type}-left: var(--sizing-#{$size});
+                #{$type}-right: var(--sizing-#{$size});
+            }
+            .#{$key}l-lg-#{$size} {
+                #{$type}-left: var(--sizing-#{$size});
+            }
+            .#{$key}r-lg-#{$size} {
+                #{$type}-right: var(--sizing-#{$size});
+            }
+            .#{$key}y-lg-#{$size} {
+                #{$type}-top: var(--sizing-#{$size});
+                #{$type}-bottom: var(--sizing-#{$size});
+            }
+            .#{$key}t-lg-#{$size} {
+                #{$type}-top: var(--sizing-#{$size});
+            }
+            .#{$key}b-lg-#{$size} {
+                #{$type}-bottom: var(--sizing-#{$size});
+            }
+        }
+    }
+}
